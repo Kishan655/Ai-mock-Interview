@@ -1,0 +1,410 @@
+{
+  "users": [
+    {
+      "_id": "5d770743-5619-4a5d-b09d-46c4629c5613",
+      "name": "Alex Student",
+      "email": "alex@college.edu",
+      "password": "$2b$10$kGV7nVh7nuOcT7DkY13M9u3K0ZW7XCYtW9mAeG4mkIOYNOtMRYbNu",
+      "targetRole": "Frontend Developer",
+      "experienceLevel": "Fresher",
+      "bio": "",
+      "skills": [
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "createdAt": "2026-10-22T09:38:58.522Z",
+      "updatedAt": "2026-10-22T09:38:58.522Z"
+    },
+    {
+      "_id": "19411ab2-6452-4c22-bd6d-6da3097d193a",
+      "name": "Priya Sharma",
+      "email": "candidate@college.edu",
+      "password": "$2b$10$0pEAiuZKWRO9LWjdS2bVf.A1dRGc1VfZVSJBBl.jRDK16vSt8ZekK",
+      "targetRole": "Software Developer",
+      "experienceLevel": "Fresher",
+      "bio": "",
+      "skills": [
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "createdAt": "2026-10-22T09:39:09.580Z",
+      "updatedAt": "2026-10-22T09:39:09.580Z"
+    },
+    {
+      "_id": "d580276b-da92-4dd2-bb35-4caffbfa2bf8",
+      "name": "Test Student",
+      "email": "test@example.com",
+      "password": "$2b$10$lKiSsKzzAdUKoRy/tLqWQO5rdh5UXu6ihOlWxeKlf/Mi7UOYOzQU2",
+      "targetRole": "Software Developer",
+      "experienceLevel": "Fresher",
+      "bio": "",
+      "skills": [
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "createdAt": "2026-10-24T07:49:07.722Z",
+      "updatedAt": "2026-10-24T07:49:07.722Z"
+    },
+    {
+      "_id": "7895f4b3-fd3a-49ed-8c31-13a28256548b",
+      "name": "Rohan Verma",
+      "email": "rohan.1792828476290@example.com",
+      "password": "$2b$10$.fKLwJMe.5njV5QigNshDOmomiS5OnoP4TLAhEYnboEd1rYxF832u",
+      "targetRole": "Frontend Developer",
+      "experienceLevel": "Fresher",
+      "bio": "",
+      "skills": [
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "createdAt": "2026-10-24T07:54:36.552Z",
+      "updatedAt": "2026-10-24T07:54:36.552Z"
+    }
+  ],
+  "interviews": [
+    {
+      "_id": "e88e3db0-2965-4138-ac82-c279b769a888",
+      "userId": "19411ab2-6452-4c22-bd6d-6da3097d193a",
+      "jobRole": "Software Developer",
+      "experienceLevel": "Fresher",
+      "interviewType": "Mixed",
+      "difficulty": "Medium",
+      "skills": [
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "totalQuestions": 4,
+      "currentQuestionIndex": 1,
+      "status": "completed",
+      "questions": [
+        {
+          "questionText": "Explain the JavaScript Event Loop. Specifically, how does Node.js differentiate between microtasks (like Promise callbacks and process.nextTick) and macrotasks (like setTimeout)? What would be the execution order of a script mixing both?",
+          "questionType": "Technical",
+          "candidateAnswer": "The JavaScript event loop constantly checks the call stack and message queues. In Node.js, process.nextTick and Promise resolution microtasks run immediately after the current operation finishes and before any macrotasks like setTimeout or setImmediate are executed. Therefore, microtasks have higher priority over macrotasks in the event loop cycle.",
+          "score": 72,
+          "feedback": "You correctly identified that microtasks take precedence over macrotasks before the event loop advances to the next phase. However, you missed explaining the crucial distinction in Node.js where `process.nextTick` sits in a separate priority queue that executes before Promise microtasks, and you did not provide a concrete execution order example as asked.",
+          "suggestedAnswer": "The Node.js event loop coordinates asynchronous I/O across phases (timers, poll, check). Macrotasks (like `setTimeout` and `setImmediate`) reside in phase-specific queues, whereas microtasks execute immediately after the current operation completes before the event loop moves to the next phase. Crucially, Node.js prioritizes the `nextTickQueue` over the standard microtask queue (`Promise.then`). In a script mixing both, the execution order is: 1) Synchronous code, 2) `process.nextTick` callbacks, 3) Promise microtasks, and 4) Macrotasks (`setTimeout`).",
+          "timeSpentSeconds": 45,
+          "answeredAt": "2026-10-22T09:39:55.486Z"
+        },
+        {
+          "questionText": "In React, passing inline callback functions or non-primitive values as props can cause child components to re-render unnecessarily. How would you identify this performance bottleneck, and how do React.memo, useCallback, and useMemo help solve it?",
+          "questionType": "Technical",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        },
+        {
+          "questionText": "Tell me about a time during an academic or personal project when you encountered a major technical roadblock or a disagreement with a team member about how to implement a feature. How did you handle the situation and what was the outcome?",
+          "questionType": "Behavioral",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        },
+        {
+          "questionText": "Follow-up: Between a resolved Promise callback and process.nextTick, which one executes first when both are queued in the same turn?",
+          "questionType": "Technical",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        }
+      ],
+      "overallScore": 22,
+      "categoryScores": {
+        "technicalKnowledge": 25,
+        "communication": 20,
+        "problemSolving": 18,
+        "answerRelevance": 25
+      },
+      "strengths": [
+        "Demonstrated foundational understanding of the JavaScript event loop and the general distinction between microtasks and macrotasks.",
+        "Correctly identified that microtasks hold higher priority over macrotasks like setTimeout in Node.js.",
+        "Formulated a concise and accurate response for the first technical prompt without adding unnecessary fluff."
+      ],
+      "weaknesses": [
+        "High skip rate across technical, follow-up, and behavioral questions, leaving three out of four questions unanswered.",
+        "Missed an opportunity to showcase practical frontend optimization knowledge in React (memoization and profiling).",
+        "Did not provide a behavioral or project-based narrative to demonstrate teamwork, problem-solving, and communication under pressure."
+      ],
+      "improvementPlan": [
+        "Adopt the STAR (Situation, Task, Action, Result) framework to prepare structured stories for common behavioral and project roadblock questions.",
+        "Attempt every interview question, even partially, by communicating thought processes or foundational principles rather than leaving prompts blank.",
+        "Deepen knowledge of Node.js internal mechanics, specifically the distinction between the nextTick queue and the standard microtask queue.",
+        "Build hands-on familiarity with React performance tools, focusing on when and why to use React.memo, useCallback, and useMemo.",
+        "Engage in timed mock interviews to build endurance and confidence in answering consecutive questions across technical and behavioral domains."
+      ],
+      "recommendedTopics": [
+        "Node.js Event Loop Phases and libuv Architecture",
+        "Microtask Queues (process.nextTick vs Promise.then)",
+        "React Re-rendering Optimization (React.memo, useMemo, useCallback)",
+        "React DevTools Profiler and Performance Auditing",
+        "Asynchronous JavaScript (Timers, Promises, Async/Await)",
+        "Behavioral Interview Preparation (STAR Method)"
+      ],
+      "createdAt": "2026-10-22T09:39:37.140Z",
+      "updatedAt": "2026-10-22T09:40:49.956Z",
+      "completedAt": "2026-10-22T09:40:49.955Z"
+    },
+    {
+      "_id": "1614e00f-a732-4952-9ecb-c9e63660abf3",
+      "userId": "d580276b-da92-4dd2-bb35-4caffbfa2bf8",
+      "jobRole": "Software Developer",
+      "experienceLevel": "Fresher",
+      "interviewType": "Mixed",
+      "difficulty": "Medium",
+      "skills": [
+        "JavaScript",
+        "React"
+      ],
+      "totalQuestions": 5,
+      "currentQuestionIndex": 0,
+      "status": "in-progress",
+      "questions": [
+        {
+          "questionText": "Can you explain how the JavaScript Event Loop works? Specifically, what is the difference between the microtask queue (like Promises) and the macrotask queue (like setTimeout), and in what order would they execute relative to synchronous code?",
+          "questionType": "Technical",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        },
+        {
+          "questionText": "In React, what causes a component to re-render, and how do hooks like useMemo and useCallback help optimize performance? Can you give an example of a scenario where using them might actually be unnecessary or counterproductive?",
+          "questionType": "Technical",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        },
+        {
+          "questionText": "When fetching data inside a React useEffect hook, how do you handle potential issues like race conditions or updating state after a component has already unmounted? How would you implement an AbortController or cleanup function to address this?",
+          "questionType": "Technical",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        },
+        {
+          "questionText": "Tell me about a challenging bug or technical roadblock you encountered in a recent project. How did you break down the problem, what tools did you use to debug it, and what was the outcome?",
+          "questionType": "Behavioral",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        },
+        {
+          "questionText": "Imagine a senior developer reviews your pull request and suggests rewriting a major part of your code to use a different pattern. How would you approach this feedback, especially if you felt your initial implementation was working as expected?",
+          "questionType": "HR",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        }
+      ],
+      "overallScore": 0,
+      "categoryScores": {
+        "technicalKnowledge": 0,
+        "communication": 0,
+        "problemSolving": 0,
+        "answerRelevance": 0
+      },
+      "strengths": [],
+      "weaknesses": [],
+      "improvementPlan": [],
+      "recommendedTopics": [],
+      "createdAt": "2026-10-24T07:51:21.959Z",
+      "updatedAt": "2026-10-24T07:51:21.959Z",
+      "completedAt": null
+    },
+    {
+      "_id": "4069015b-787f-439a-b03a-1601d854dc3c",
+      "userId": "d580276b-da92-4dd2-bb35-4caffbfa2bf8",
+      "jobRole": "Software Developer",
+      "experienceLevel": "Fresher",
+      "interviewType": "Mixed",
+      "difficulty": "Medium",
+      "skills": [
+        "JavaScript",
+        "React"
+      ],
+      "totalQuestions": 5,
+      "currentQuestionIndex": 1,
+      "status": "in-progress",
+      "questions": [
+        {
+          "questionText": "Explain the concepts of \"state\" and \"props\" in React. How do they differ, and when would you use each to manage data within your components?",
+          "questionType": "Technical",
+          "candidateAnswer": "Props are read-only inputs passed from a parent component to a child component, while state is internal mutable data managed within the component itself. We use state when data changes over time in response to user actions.",
+          "score": 88,
+          "feedback": "The answer addresses key points (37 words provided). To improve, delve deeper into architectural trade-offs, edge cases, and real-world implementation details.",
+          "suggestedAnswer": "An ideal response clearly defines the core concept, explains its operational mechanism, notes performance implications, and provides a concise practical example.",
+          "timeSpentSeconds": 35,
+          "answeredAt": "2026-10-24T07:53:18.626Z"
+        },
+        {
+          "questionText": "Write a JavaScript function that takes an array of numbers and returns a new array containing only the even numbers, sorted in ascending order. For example, `filterAndSortEvens([5, 2, 8, 1, 4])` should return `[2, 4, 8]`.",
+          "questionType": "Technical",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        },
+        {
+          "questionText": "Describe a time when you faced a significant technical challenge or bug while working on a project (academic or personal). How did you approach debugging and resolving it, and what did you learn from the experience?",
+          "questionType": "Behavioral",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        },
+        {
+          "questionText": "In a React application, when might a component re-render unnecessarily? How would you go about identifying such a scenario, and what techniques or hooks could you use to optimize performance and prevent unnecessary re-renders?",
+          "questionType": "Technical",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        },
+        {
+          "questionText": "Explain the difference between `async/await` and `.then().catch()` syntax for handling asynchronous operations in JavaScript. Provide a simple example where you might prefer using `async/await`.",
+          "questionType": "Technical",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        }
+      ],
+      "overallScore": 0,
+      "categoryScores": {
+        "technicalKnowledge": 0,
+        "communication": 0,
+        "problemSolving": 0,
+        "answerRelevance": 0
+      },
+      "strengths": [],
+      "weaknesses": [],
+      "improvementPlan": [],
+      "recommendedTopics": [],
+      "createdAt": "2026-10-24T07:53:01.603Z",
+      "updatedAt": "2026-10-24T07:53:24.627Z",
+      "completedAt": null
+    },
+    {
+      "_id": "68479082-af69-4163-9fd9-9729aca1e2e9",
+      "userId": "7895f4b3-fd3a-49ed-8c31-13a28256548b",
+      "jobRole": "Frontend Developer",
+      "experienceLevel": "Fresher",
+      "interviewType": "Mixed",
+      "difficulty": "Medium",
+      "skills": [
+        "React",
+        "JavaScript",
+        "CSS"
+      ],
+      "totalQuestions": 5,
+      "currentQuestionIndex": 1,
+      "status": "completed",
+      "questions": [
+        {
+          "questionText": "Explain the difference between `props` and `state` in React. When would you use each, and can a child component directly modify its parent's `state`?",
+          "questionType": "Technical",
+          "candidateAnswer": "React uses a Virtual DOM which is an in-memory lightweight representation of the real DOM. When state changes, React runs reconciliation to compare the previous Virtual DOM tree with the new one and batch updates the real DOM efficiently.",
+          "score": 88,
+          "feedback": "The answer addresses key points (39 words provided). To improve, delve deeper into architectural trade-offs, edge cases, and real-world implementation details.",
+          "suggestedAnswer": "An ideal response clearly defines the core concept, explains its operational mechanism, notes performance implications, and provides a concise practical example.",
+          "timeSpentSeconds": 42,
+          "answeredAt": "2026-10-24T07:54:50.055Z"
+        },
+        {
+          "questionText": "Describe how you would center a `div` both horizontally and vertically using CSS. Provide at least two different methods and explain their browser support considerations.",
+          "questionType": "Technical",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        },
+        {
+          "questionText": "Tell me about a time you encountered a challenging bug or problem while working on a frontend project. How did you approach diagnosing and solving it, and what did you learn from the experience?",
+          "questionType": "Behavioral",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        },
+        {
+          "questionText": "Explain the concept of `hoisting` in JavaScript. Provide a simple code example where understanding hoisting is crucial to predict the output.",
+          "questionType": "Technical",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        },
+        {
+          "questionText": "In React, why is it generally recommended to avoid directly mutating state, and what are the common approaches to update state immutably?",
+          "questionType": "Technical",
+          "candidateAnswer": "",
+          "score": 0,
+          "feedback": "",
+          "suggestedAnswer": "",
+          "timeSpentSeconds": 0
+        }
+      ],
+      "overallScore": 18,
+      "categoryScores": {
+        "technicalKnowledge": 45,
+        "communication": 50,
+        "problemSolving": 48,
+        "answerRelevance": 50
+      },
+      "strengths": [
+        "Demonstrated genuine attempt across 1 out of 5 questions.",
+        "Showed solid familiarity with fundamental Frontend Developer principles and terminology.",
+        "Maintained a professional, structured answering format."
+      ],
+      "weaknesses": [
+        "Could provide deeper technical explanations and cite real project challenges.",
+        "Some responses could be more structured using the STAR (Situation, Task, Action, Result) methodology."
+      ],
+      "improvementPlan": [
+        "Review core data structures, algorithms, and standard runtime complexities (Big-O).",
+        "Build 1-2 end-to-end full stack projects to articulate real challenges faced.",
+        "Practice vocalizing technical problem-solving steps before providing the final answer.",
+        "Revise system architecture, state management, and database query optimization."
+      ],
+      "recommendedTopics": [
+        "Frontend Developer Core Architecture",
+        "REST API Design & HTTP Status Codes",
+        "Database Indexing & Query Optimization",
+        "State Management & Component Lifecycle",
+        "Asynchronous Programming & Event Loop",
+        "Clean Code & SOLID Design Principles"
+      ],
+      "createdAt": "2026-10-24T07:54:43.046Z",
+      "updatedAt": "2026-10-24T07:54:58.066Z",
+      "completedAt": "2026-10-24T07:54:58.066Z"
+    }
+  ]
+}

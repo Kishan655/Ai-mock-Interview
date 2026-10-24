@@ -1,0 +1,6 @@
+{
+  "name": "InterviewAI - AI Mock Interview Platform",
+  "description": "Comprehensive AI mock interview platform for college students, freshers, and job seekers featuring role-specific questions, live timers, personalized feedback, and detailed performance evaluations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
